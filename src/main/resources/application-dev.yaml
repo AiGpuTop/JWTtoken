@@ -5,7 +5,7 @@ spring:
     datasource:
         # \u9A71\u52A8
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/csjpa?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        url: jdbc:mysql://127.0.0.1:3306/csjpa?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
         password: root
         username: root
     jpa:
