@@ -16,6 +16,10 @@ spring:
             #update：每次运行程序，没有表会新建表，但是表内有数据不会被清空，只会更新表结构。
             #validate：运行程序会校验数据与数据库的字段类型是否相同，不同会报错
             ddl-auto: update
-
+    #  security的      配置用户的基本信息
+    security:
+        user:
+            password: 111
+            name: aaa
 swagger:
     enable: true

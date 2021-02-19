@@ -1,4 +1,4 @@
-package com.linhao.demo.test.jpa.model;
+package com.linhao.demo.test.model;
 
 import lombok.Data;
 
