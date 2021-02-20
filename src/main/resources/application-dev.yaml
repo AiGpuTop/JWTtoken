@@ -23,3 +23,11 @@ spring:
             name: aaa
 swagger:
     enable: true
+jwt:
+    header: Authorization
+    # 令牌前缀
+    token-start-with: Bearer
+    # 使用Base64对该令牌进行编码
+    base64-secret: MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEA0WaRbzhdnly+S5EqfuP7X3q1X3nsUuGdFgjd/nQdx7jYilNUmaKdoqxAXt7C76gR7ynL3Kuf7gMLPk+7Vj8P+wIDAQABAkAjd1fSmp1goRyp9+BWtY5x0Xq+vQvFzeipPr86xbf1h455w+wnDG0BmN5mdyDrCbh/JBApb/QqXvg4k5lSoVghAiEA/wAfYOVESFlBQv7xjIFIA1Z3k2QsDuYK/iaeeqb4Bx8CIQDSOLBbJKBK0M0Nz5vcQDAwV0bDRpZQ3Lj7qtbBattnpQIhAIv9+jwMwcbiUUTBh8R2OR2z+6OMK+/l9QUAGKMHRUVLAiBRziuanCsgUhapnDObxwK5nQz1ap+OAgaeMMH3bHzK3QIhAJab5MDInyX6E/yarqcPaWKHXzqiMTStPtUitVNWx7Ia
+    # 令牌过期时间 此处单位/毫秒
+    token-validity-in-seconds: 14400000

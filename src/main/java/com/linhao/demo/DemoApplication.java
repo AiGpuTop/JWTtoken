@@ -1,9 +1,12 @@
 package com.linhao.demo;
 
+import com.linhao.demo.test.jwt.实现token验证的过滤器.JwtAuthenticationTokenFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
 
@@ -36,5 +39,10 @@ public class DemoApplication {
                 "External访问网址: \thttp://" + ip + ":" + port + path + "\n\t" +
                 "----------------------------------------------------------");
     }
-
+    @Bean
+    public FilterRegistrationBean registration(JwtAuthenticationTokenFilter filter) {
+        FilterRegistrationBean registration = new FilterRegistrationBean(filter);
+        registration.setEnabled(false);
+        return registration;
+    }
 }
